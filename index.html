@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./CSS/style.css" />
+        <title>バリ好きっちゃん、マジぎゅんぎゅん愛しとーと４</title>
+    </head>
+    <body>
+        <div id="start-screen">
+            <div class="start-title">
+                <p>メンヘラ博多女子からのホラー脱出ゲーム</p>
+                <h1>バリ好きっちゃん、<br>マジぎゅんぎゅん愛しとーと４</h1>
+            </div>
+            <button id="start-button" class="start-button">スタート</button>
+
+        </div>
+        <canvas id="flashlight-overlay"></canvas>
+        <main class="room">
+            <div id="floor"></div>
+            <div id="wall-left"></div>
+            <div id="wall-right"></div>
+            <div id="clock" class="clickable-item" data-popup="clock">
+                <img src="./materials/clock.png" alt="clock" />
+            </div>
+            <div id="window" class="clickable-item" data-popup="window">
+                <img src="./materials/window.png" alt="window" />
+            </div>
+            <div id="bookshelf" class="clickable-item">
+                <img
+                    id="shelf"
+                    src="./materials/bookshelf.png"
+                    alt="本棚"
+                    class="clickable-item"
+                    data-popup="shelf"
+                />
+                <img
+                    id="plant"
+                    src="./materials/plant.png"
+                    alt="植物"
+                    class="on-bookshelf clickable-item"
+                    data-popup="plant"
+                />
+            </div>
+            <div id="table">
+                <img src="./materials/table.png" alt="テーブル" />
+                <img
+                    id="potara"
+                    class="on-table potara clickable-item"
+                    data-popup="potara"
+                    src="./materials/potara.png"
+                    alt="ポタラ"
+                />
+                <img
+                    id="diary"
+                    class="on-table diary clickable-item"
+                    data-popup="diary"
+                    src="./materials/diary.png"
+                    alt="日記"
+                />
+            </div>
+            <div id="desk">
+                <img src="./materials/desk.png" alt="デスク" />
+                <img
+                    id="perfume"
+                    class="on-desk clickable-item"
+                    data-popup="perfume"
+                    src="./materials/perfume.png"
+                    alt="香水"
+                />
+            </div>
+            <div id="xoxo" class="clickable-item" data-popup="xoxo">
+                <img src="./materials/xoxo.png" alt="xoxo" />
+            </div>
+            <div id="socks" class="clickable-item" data-popup="socks">
+                <img src="./materials/socks.png" alt="socks" />
+            </div>
+            <div id="handball" class="clickable-item" data-popup="handball">
+                <img src="./materials/handball.png" alt="handball" />
+            </div>
+            <div id="speaker" class="clickable-item" data-popup="speaker">
+                <img src="./materials/speaker.png" alt="speaker" />
+            </div>
+            <div id="teddy" class="clickable-item" data-popup="teddy">
+                <img src="./materials/teddy.png" alt="teddy" />
+            </div>
+            <div id="cat" class="clickable-item" data-popup="cat">
+                <img src="./materials/cat.png" alt="cat" />
+            </div>
+            <div id="painting" class="clickable-item" data-popup="painting">
+                <img src="./materials/painting.png" alt="painting" />
+            </div>
+        </main>
+
+        <!-- ポップアップ共通HTML -->
+        <div id="popup-overlay" class="hidden">
+            <div id="popup" class="popup-content">
+                <button type="button" class="popup-close">&times;</button>
+                <div class="popup-body"></div>
+            </div>
+        </div>
+        <!-- エンディング -->
+        <div id="ending-screen" style="display: none;">
+            <h2>ゲームクリア！</h2>
+            <p>アヤちゃんはたぶん許してくれた</p>
+        </div>
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
